@@ -1,0 +1,53 @@
+{
+  "identifier": "default",
+  "description": "permissions for skyloader blyat",
+  "windows": [
+    "main"
+  ],
+  "permissions": [
+    "core:default",
+    {
+      "identifier": "opener:allow-open-path",
+      "allow": [
+        {
+          "path": "$APPDATA/**"
+        }
+      ]
+    },
+    "fs:default",
+    {
+      "identifier": "http:default",
+      "allow": [
+        {
+          "url": "https://**"
+        },
+        {
+          "url": "http://localhost:3000/*"
+        }
+      ]
+    },
+    {
+      "identifier": "fs:scope",
+      "allow": [
+        {
+          "path": "$APPDATA"
+        },
+        {
+          "path": "$APPDATA/*"
+        },
+        {
+          "path": "$APPDATA/**/*"
+        }
+      ]
+    },
+    "fs:allow-app-write",
+    "fs:scope-app-recursive",
+    "core:window:allow-start-dragging",
+    "core:window:allow-set-resizable",
+    "core:window:allow-toggle-maximize",
+    "core:window:allow-set-fullscreen",
+    "core:window:allow-close",
+    "os:default",
+    "dialog:default"
+  ]
+}
